@@ -362,7 +362,7 @@ def announce(request, torrent_pass=None):
 
     # Remove peers that haven't been seen in TORRENT_INTERVAL*2 minutes.
     torrent_interval = getattr(BuffisTracker.settings, 'TORRENT_INTERVAL', DEFAULT_TORRENT_INTERVAL)
-    torrent.peers.filter(seen__lt = datetime.datetime.now()-datetime.timedelta(minutes=torrent_interval*2)).delete()
+    torrent.peers.filter(seen__lt = datetime.datetime.now()-datetime.timedelta(seconds=torrent_interval*2)).delete()
 
     # Add peer to peer list as long as he hasn't stopped.
     if add_peer:

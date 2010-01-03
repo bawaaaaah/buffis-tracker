@@ -6,7 +6,6 @@
      <tr>
          <th><a href="?page={{ page_obj.number }}&order_by={% ifequal order_by 'name' %}-{% endifequal %}name">Name</a></th>
          <th><a href="?page={{ page_obj.number }}&order_by={% ifequal order_by 'timestamp' %}-{% endifequal %}timestamp">Time uploaded</a></th>
-         <th>Tags</th>
          <th><a href="?page={{ page_obj.number }}&order_by={% ifequal order_by 'seeders' %}-{% endifequal %}seeders">Seeders</a></th>
          <th><a href="?page={{ page_obj.number }}&order_by={% ifequal order_by 'leechers' %}-{% endifequal %}leechers">Leechers</a></th>
          <th><a href="?page={{ page_obj.number }}&order_by={% ifequal order_by 'filesize' %}-{% endifequal %}filesize">Size</a></th>
@@ -17,7 +16,6 @@
      <tr>
          <td><a href="{{ torrent.get_absolute_url }}">{{ torrent.name }}</a></td>
         <td>{{ torrent.timestamp|date:"Y-m-d H:i" }}</td>
-        <td>TAGS</td>
         <td>{{ torrent.seeders }}</td>
         <td>{{ torrent.leechers }}</td>
         <td>{{ torrent.filesize_readable }}</td>

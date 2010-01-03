@@ -1,0 +1,125 @@
+body { margin: 0px; padding: 0px; font-family: Helvetica; }
+#PageContent { padding: 10px; }
+#PageTitle { 
+    font-size: 2.5em; 
+    font-family: Helvetica; 
+    background-color: #008C00; 
+    color: #FFFFFF;
+    padding: 15px;
+    border-bottom: 10px solid #006E2E;
+}
+
+h1 a, th a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 2em;
+    font-family: Helvetica;
+    font-weight: normal;
+    margin-top: 0px;
+}
+
+td, th {
+    vertical-align: top;
+    text-align: left;
+}
+
+.MainTable {
+    width: 700px;
+    margin-right: 10px;
+}
+
+.SearchBox {
+    width: 280px;
+    background-color: #CDEB8B;
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-bottom: 4px solid #006E2E;
+    font-size: 0.9em;
+    margin-bottom: 30px;
+}
+
+.SearchBox form {
+    margin: 0px;
+    padding: 0px;
+}
+
+.SearchBox input {
+    margin: 4px;
+    width: 270px;
+}
+
+.SearchBox ul {
+    text-indent: 0px;
+    margin: 0px;
+    padding: 4px;
+}
+.SearchBox li {
+    list-style: none;
+    margin: 0px;
+    border-bottom: 1px solid #006E2E;
+}
+
+.SearchHeader, #ProfileHeader {
+    background-color: #008C00;
+    border-bottom: 4px solid #006E2E;
+    color: #FFFFFF;
+    padding: 3px;
+    font-weight: bold;
+}
+
+#UploadForm, #ProfileBox {
+    width: 700px;
+    margin-right: 10px;
+    background-color: #CDEB8B;
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-bottom: 4px solid #006E2E;
+}
+
+#UploadFormHeader {
+    background-color: #008C00;
+    border-bottom: 4px solid #006E2E;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding: 3px;
+}
+
+#UploadForm td {
+    padding-left: 10px;
+    font-size: 0.8em;
+}
+
+#UploadForm table {
+    padding: 10px;
+}
+
+#UploadForm input, #UploadForm select, #UploadForm textarea {
+    width: 500px;
+    font-size: 1em;
+}
+
+.errorlist {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    color: #FF1A00;
+}
+
+#UploadReminder {
+    padding: 5px;
+    font-size: 1.2em;
+    color: #000000;
+}
+
+#ListNavigator {
+    font-size: 0.9em;
+    padding: 4px;
+    text-align: right;
+    margin-right: 10px;
+}

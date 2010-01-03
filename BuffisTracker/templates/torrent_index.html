@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>buffis-tracker</title>
+        <style type="text/css">
+         {% include "torrent_css/main.css" %}
+         {% include "torrent_css/torrent_detail.css" %}
+         {% include "torrent_css/torrent_list.css" %}
+        </style>
+    </head>
+
+    <body>
+        <h1 id="PageTitle"><a href="/torrents/">buffis-tracker</a></h1>
+        <div id="PageContent">
+ <table id="MainLayoutTable">
+  <tr>
+   <td>
+    <div>
+         {% block content %}{% endblock %}
+    </div>
+</td>
+  <td>
+      <h2>My torrents</h2>
+      <div class="SearchBox">
+        <div class="SearchHeader">
+            Upload and list my torrents
+        </div>
+        <ul>
+            <li><a href="/torrents/upload/">Upload torrent</a></li>
+            <li><a href="/torrents/mytorrents/">My torrents</a></li>
+            <li><a href="/torrents/profile/">My profile</a></li>
+        </ul>
+
+      </div>
+
+      <h2>Search</h2>
+      <div class="SearchBox">
+        <div class="SearchHeader">
+            Search in filenames
+        </div>
+        <form action="/torrents/search/" method="POST">
+        <input name="searchterm" />
+        </form>
+      </div>
+
+      <h2>Categories</h2>
+      <div class="SearchBox">
+        <div class="SearchHeader">
+            Listing all categories
+        </div>
+        <ul>
+        {% for category in categories %}
+        <li><a href="{{ category.get_absolute_url }}">{{ category.name }}</a></li>
+        {% endfor %}
+        </ul>
+      </div>
+
+      <h2>Tags</h2>
+      <div class="SearchBox">
+        <div class="SearchHeader">
+            Top tags
+        </div>
+        <ul>
+        {% for tag in top_tags %}
+        <li><a href="{{ tag.get_absolute_url }}">{{ tag.name }}</a></li>
+        {% endfor %}
+        </ul>
+      </div>
+
+  </td>
+  </tr>
+  </table>
+    </body>
+</html>

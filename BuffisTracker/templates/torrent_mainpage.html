@@ -1,0 +1,39 @@
+{% extends "torrent_index.html" %}
+
+{% block content %}
+ <h2>{{ list_header }}</h2>
+ <table id="ListTable" class="MainTable">
+     <tr>
+         <th><a href="?page={{ page_obj.number }}&order_by={% ifequal order_by 'name' %}-{% endifequal %}name">Name</a></th>
+         <th><a href="?page={{ page_obj.number }}&order_by={% ifequal order_by 'timestamp' %}-{% endifequal %}timestamp">Time uploaded</a></th>
+         <th>Tags</th>
+         <th><a href="?page={{ page_obj.number }}&order_by={% ifequal order_by 'seeders' %}-{% endifequal %}seeders">Seeders</a></th>
+         <th><a href="?page={{ page_obj.number }}&order_by={% ifequal order_by 'leechers' %}-{% endifequal %}leechers">Leechers</a></th>
+         <th><a href="?page={{ page_obj.number }}&order_by={% ifequal order_by 'filesize' %}-{% endifequal %}filesize">Size</a></th>
+         <th>DL</th>
+     </tr>
+
+     {% for torrent in torrent_list %}
+     <tr>
+         <td><a href="{{ torrent.get_absolute_url }}">{{ torrent.name }}</a></td>
+        <td>{{ torrent.timestamp|date:"Y-m-d H:i" }}</td>
+        <td>TAGS</td>
+        <td>{{ torrent.seeders }}</td>
+        <td>{{ torrent.leechers }}</td>
+        <td>{{ torrent.filesize_readable }}</td>
+        <td><a href="{{ torrent.get_download_url }}"><img src="/pics/download.png" /></a></td>
+     </tr>
+     {% endfor %}
+ </table>
+
+ <div id="ListNavigator">
+     {% if page_obj.has_previous %}
+     <a href="?page={{ page_obj.previous_page_number }}&order_by={{ order_by }}">Previous</a> -
+     {% endif %}
+     Page {{ page_obj.number }} of {{ paginator.num_pages }}
+     {% if page_obj.has_next %}
+     - <a href="?page={{ page_obj.next_page_number }}&order_by={{ order_by }}">Next</a>
+      {% endif %}
+  </div>
+{% endblock %}
+

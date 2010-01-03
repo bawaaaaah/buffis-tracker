@@ -1,0 +1,89 @@
+#ObjectNameBox {
+    font-size: 2em;
+    font-family: Helvetica;
+    width: 700px;
+}
+
+#TagBox {
+    background-color: #FFD;
+    padding: 6px;
+    font-family: Helvetica;
+    width: 700px;
+}
+
+#DescriptionBox {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 6px;
+    font-family: Helvetica;
+    width: 700px;
+}
+
+#DownloadBox {
+    background-color: #CDEB8B;
+    border: 5px solid #BCDA7A;
+    width: 500px;
+    height: 140px;
+    margin-bottom: 15px;
+}
+
+#DownloadBox #DownloadArrow {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    float: left;
+}
+
+#DownloadBox #DownloadInfo {
+   margin: 0px 20px 0px 0px;
+   font-family: Helvetica;
+   float: left;
+}
+
+#DownloadBox #DownloadInfo li {
+    list-style: none;
+}
+
+#CommentBox {
+    width: 700px;
+    font-family: Helvetica;
+    background-color: #CDEB8B;
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-bottom: 4px solid #006E2E;
+}
+
+#CommentHeader {
+    background-color: #008C00;
+    border-bottom: 4px solid #006E2E;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding: 3px;
+}
+
+#CommentBox .CommentBoxComment {
+    border-bottom: 1px solid #006E2E;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 0.8em;
+}
+
+#CommentBox form {
+    padding: 0px;
+    margin: 0px;
+}
+
+#CommentBox h2 {
+    font-size: 1.2em;
+}
+
+#CommentBox textarea {
+   width: 680px; 
+   height: 70px;
+}
+
+#TorrentLayoutTable tr td {
+    vertical-align: top;
+}

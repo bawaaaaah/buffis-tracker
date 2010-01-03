@@ -1,0 +1,16 @@
+{% extends "torrent_index.html" %}
+
+{% block content %}
+<h2>Profile for {{ user.username }}</h2>
+
+<div id="ProfileBox">
+    <div id="ProfileHeader">Showing activity for {{ user.username}}</div>
+    <table>
+        <tr><th>Uploaded:</th><td>{{ profile.uploaded_readable }}</td></tr>
+        <tr><th>Downloaded:</th><td>{{ profile.downloaded_readable }}</td></tr>
+        <tr><th>Number of torrents:</th><td>{{ profile.num_torrents }}</td></tr>
+    </table>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,15 @@
+{% extends "torrent_index.html" %}
+
+{% block content %}
+ <h2>Upload torrent</h2>
+ <form enctype="multipart/form-data" method="post" action="/torrents/upload/" id="UploadForm">
+ <div id="UploadFormHeader">Upload a torrent to buffis-tracker</div>
+ <table>
+     <th>Announce:</th><td>{{ announce_url }}</td>
+ {{ form.as_table }}
+ <th>&nbsp;</th><td><input type="Submit" value="Upload" style="width: 200px;" /></td>
+ </table>
+ <div id="UploadReminder">IMPORTANT: Be sure to download the .torrent from this site after you've uploaded it. Otherwise it wont connect to the tracker properly when seeding.</p>
+ </form>
+{% endblock %}
+

@@ -1,0 +1,28 @@
+#ListTable {
+    padding: 0px;
+    color: #36393D;
+    border-spacing: 0px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 4px solid #006E2E;
+    font-size: 0.9em;
+}
+
+#ListTable th {
+    color: #FFFFFF;
+    background-color: #008C00;
+    border-bottom: 4px solid #006E2E;
+    padding: 3px;
+}
+
+#ListTable td {
+    background-color: #CDEB8B;
+    border-bottom: 1px solid #006E2E;
+    padding: 3px;
+    color: #000000;
+}
+
+#ListTable img {
+    height: 20px;
+}

@@ -1,0 +1,40 @@
+{% extends "torrent_index.html" %}
+
+{% block content %}
+ <h2>{{ object.name }}</h2>
+
+ <div id="TagBox">
+ {% for tag in object.tags.all %}
+ <a href="{{ tag.get_absolute_url }}">{{ tag.name }}</a>
+ {% endfor %}
+ </div>
+
+ <div id="DescriptionBox">{{ object.description|linebreaksbr }}</div>
+
+ <div id="DownloadBox">
+  <a href="{{ object.get_download_url }}"><img src="/pics/download.png" id="DownloadArrow" \></a>
+  <div id="DownloadInfo">
+   <ul>
+    <li>File size: {{ object.filesize_readable }} MB</li>
+    <li>Uploaded: {{ object.timestamp|date:"Y-m-d H:i" }}</li>
+    <li>Downloaded: {{ object.downloads }} times</li>
+    <li>Seeders: {{ object.seeders }}</li>
+    <li>Leechers: {{ object.leechers }}</li>
+   </ul>
+  </div>
+ </div> <!-- End DownloadBox -->
+
+ <div id="CommentBox">
+     <div id="CommentHeader">Comments</div>
+  {% for comment in object.comment_set.all %}
+   <div class="CommentBoxComment">{{ comment.text|linebreaksbr }}</div>
+  {% endfor %}
+  <div class="CommentBoxComment">
+      <form action="/torrents/postcomment/{{ object.id }}/" method="POST">
+      <textarea name="NewComment"></textarea>
+      <input type="submit" value="Post new comment" />
+      </form>
+  </div>
+ </div>
+{% endblock %}
+
